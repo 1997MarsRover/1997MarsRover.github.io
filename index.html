@@ -55,6 +55,78 @@
             color: #D0D0D0;
             font-size: 18px;
         }
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #2C5F2D;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: #1A1A1A;
+            border: 4px solid #2C5F2D;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .left {
+            left: 0;
+        }
+        .right {
+            left: 50%;
+        }
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid #2C5F2D;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent #2C5F2D;
+        }
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid #2C5F2D;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent #2C5F2D transparent transparent;
+        }
+        .right::after {
+            left: -16px;
+        }
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: #2C5F2D;
+            position: relative;
+            border-radius: 6px;
+        }
     </style>
 </head>
 <body>
@@ -63,32 +135,60 @@
     </div>
 
     <header>
-        <h1>Your Name</h1>
+        <h1>Anthony(1997MarsRover)</h1>
         <p class="highlight">Researcher in Geometric Deep Learning</p>
     </header>
 
     <nav>
         <a href="#about">About</a>
-        <a href="#research">Research</a>
+        <a href="#research">Works</a>
         <a href="#publications">Publications</a>
+        <a href="articles.html">Articles</a>
+
         <a href="#contact">Contact</a>
     </nav>
 
     <main>
         <section id="about">
             <h2>About</h2>
-            <p>CS student, primarily focused on Dynamic Gaussian Human Avatars</p>
+            <p>CS student, primarily focused on Dynamic Gaussian Human Avatars Reconstruction.</p>
+
+            <p>doing a thing where am relearnig all of Deep learning and machine learning from the maths to makign GPU go Brrrrrr</p>
         </section>
 
         <section id="research">
             <h2>Current Research</h2>
-            <p></p>
+            <h3>Linear Algebra</h3>
+            <h3>CUDA</h3>
+            <p> Making a Cuda Guide Buide for DL trainists outhere thinking of Knowing Cuda. </p>
+            <img href="assets/hieu.png">
+<a href='https://github.com/cuda-guide.git'>Cuda-Guide</a>
+            <h3>Deep Leaning Framworks</h3>
+            <h3>Gaussian Splats on Neutral and Deformable fields</h3>
+            
         </section>
-
+        <section id="timeline">
+          <h2>Work T</h2>
+          <div class="timeline">
+            <div class="timeline-item right">
+              <div class="timeline-content">
+                  <h3>202 September</h3>
+                  <p>Junior Data Scientist At Signvrse</p>
+              </div>
+          </div>
+              <div class="timeline-item left">
+                  <div class="timeline-content">
+                      <h3>2024 May</h3>
+                      <p>Software Engineer intern At Signvrse</p>
+                  </div>
+              </div>
+          </div>
+      
+        </section>
         <section id="contact">
             <h2>Contact</h2>
             <p>mail: <a href="mailto:antonygithinji11156@gmail.com">antonygithinji11156@gmnail.com</a></p>
-            <p>Institution: Machakos University</p>
+            <p> message me on <a href="https://x.com/AnthonyGM_g" style="color: #f8f8f8;"> X</a></p>
         </section>
     </main>
 
@@ -96,4 +196,26 @@
         <p>&copy; 2024 Anthony. All rights reserved.</p>
     </footer>
 </body>
+<script>
+  // Function to add a new timeline entry
+  function addTimelineEntry() {
+      const year = prompt("Enter the year:");
+      const content = prompt("Enter the event description:");
+      
+      if (year && content) {
+          const timeline = document.querySelector('.timeline');
+          const newEntry = document.createElement('div');
+          newEntry.className = `timeline-item ${timeline.children.length % 2 === 0 ? 'left' : 'right'}`;
+          newEntry.innerHTML = `
+              <div class="timeline-content">
+                  <h3>${year}</h3>
+                  <p>${content}</p>
+              </div>
+          `;
+          timeline.appendChild(newEntry);
+      }
+  }
+
+  // You can call addTimelineEntry() when needed, e.g., on button click
+</script>
 </html>
