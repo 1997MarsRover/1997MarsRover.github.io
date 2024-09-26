@@ -1,44 +1,99 @@
-<html>
-  <head>
-    <title>1997MarsRover</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Researcher</title>
     <style>
-        main {
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #B0B0B0; /* Matte gray for text */
+            background-color: #1A1A1A; /* Matte black for background */
+            max-width: 800px;
+            margin: 0 auto;
             padding: 20px;
-            
         }
-        h1 {
-            color: darkgreen;
+        h1, h2 {
+            color: #D0D0D0; /* Lighter gray for headings */
         }
-          h2 {
-            color: darkgreen;
+        nav {
+            margin-bottom: 20px;
         }
-      
-      
+        nav a {
+            margin-right: 15px;
+            color: #2C5F2D; /* Forest green for nav links */
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+            color: #97BC62; /* Lighter green on hover */
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        a {
+            color: #2C5F2D; /* Forest green for links */
+        }
+        a:hover {
+            color: #97BC62; /* Lighter green on hover */
+        }
+        .highlight {
+            color: #2C5F2D; /* Forest green for highlighted text */
+        }
+        .image-placeholder {
+            width: 100%;
+            height: 300px; /* Adjust this value to change the height of the placeholder */
+            background-color: #2C5F2D;
+            background-image: url('assets/cave.png');
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #D0D0D0;
+            font-size: 18px;
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
+    <div class="image-placeholder">
+  
+    </div>
+
+    <header>
+        <h1>Your Name</h1>
+        <p class="highlight">Researcher in Geometric Deep Learning</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
     <main>
-<nav>
-<ul>
-<li><a href="https://github.com/1997MarsRover/Small-LMs/tokenization.git">byte-pair encoding</a></li>
-</ul>
-</nav>
-        <h1><a href="https://twitter.com/AnthonyGM_g">X</a></h1>
-        <p>Geometric Deep Learning</p>
-      <h3>Graph Neural Networks</h3>
-      <p>Grounded in the structure of deep learning, Graph Neural Networks (GNNs) are a type of neural network designed to work directly with graph-structured data. This is in contrast to traditional neural networks that rely on grid-structured data.</p>
-      <p>As Michael Bronstein notes in his book "Geometric Deep Learning: Grids, Graphs, and Geodesics", GNNs can be viewed as a generalization of traditional neural networks to graph-structured data.</p>
-      <p>Mathematically, a GNN can be represented as a composition of the following layers:</p>
-      <p>1. Graph convolutional layer: This layer applies a convolutional operation to the graph-structured data, where the convolutional operation is defined as:</p>
-      <p>H = σ(U * X * W)</p>
-      <p>where H is the output of the layer, U is the adjacency matrix of the graph, X is the input data, W is the weight matrix, and σ is the activation function.</p>
-      <p>2. Graph pooling layer: This layer reduces the spatial dimensions of the graph-structured data, typically using a pooling operation such as max-pooling or average-pooling.</p>
-      <p>3. Graph readout layer: This layer generates a fixed-size vector representation of the graph-structured data, typically using a permutation-invariant function such as sum-pooling or mean-pooling.</p>
-      <p>Reconstructing Human Faces from single RGB monocular videos</p>
-      <h2>Harry Porter AND the Methods of Rationality</h2>
-      <p>CHAPTER 1 : A DAY OF VERY LOW
-PROBABILITY</p>
+        <section id="about">
+            <h2>About</h2>
+            <p>CS student, primarily focused on Dynamic Gaussian Human Avatars</p>
+        </section>
+
+        <section id="research">
+            <h2>Current Research</h2>
+            <p></p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>mail: <a href="mailto:antonygithinji11156@gmail.com">antonygithinji11156@gmnail.com</a></p>
+            <p>Institution: Machakos University</p>
+        </section>
     </main>
-   
-  </body>
-</html> 
+
+    <footer>
+        <p>&copy; 2024 Anthony. All rights reserved.</p>
+    </footer>
+</body>
+</html>
